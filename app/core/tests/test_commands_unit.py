@@ -47,7 +47,7 @@ class CommandTests(TestSetUp):
                    '.get_publisher_detail'), \
                 patch('openlxp_xia.management.utils.xia_internal'
                       '.XIAConfiguration.objects') as xisCfg:
-            xiaConfig = XIAConfiguration(publisher='JKO')
+            xiaConfig = XIAConfiguration(publisher='ACE')
             xisCfg.first.return_value = xiaConfig
             test_df = pd.DataFrame.from_dict(self.test_data)
             result = add_publisher_to_source(test_df)

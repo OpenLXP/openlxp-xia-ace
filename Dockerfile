@@ -14,15 +14,15 @@ RUN chmod a=rwx /etc/debug.log
 # copy source and install dependencies
 RUN mkdir -p /opt/app
 RUN mkdir -p /opt/app/pip_cache
-RUN mkdir -p /opt/app/openlxp-xia-jko
+RUN mkdir -p /opt/app/openlxp-xia-ace
 COPY requirements.txt start-server.sh start-app.sh /opt/app/
 RUN chmod +x /opt/app/start-server.sh
 RUN chmod +x /opt/app/start-app.sh
-COPY ./app /opt/app/openlxp-xia-jko/
+COPY ./app /opt/app/openlxp-xia-ace/
 WORKDIR /opt/app
 RUN pip install -r requirements.txt --cache-dir /opt/app/pip_cache
 RUN chown -R www-data:www-data /opt/app
-WORKDIR /opt/app/openlxp-xia-jko/
+WORKDIR /opt/app/openlxp-xia-ace/
 
 # start server
 EXPOSE 8020

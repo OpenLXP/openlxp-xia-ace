@@ -18,12 +18,12 @@ class TestSetUp(TestCase):
             "test_name": "test name",
             "Start_date": "2017-03-28T00:00:00-04:00",
             "LearningResourceIdentifier": "TestData 123",
-            "SOURCESYSTEM": "JKO",
+            "SOURCESYSTEM": "ACE",
             "test_description": "test description",
             "supplemental_data": "sample1"
         }
 
-        self.key_value = "TestData 123_JKO"
+        self.key_value = "TestData 123_ACE"
         self.key_value_hash = \
             "348a3c0ceae1888ea586252c6f66c9010917935237688771c638" \
             "e46dfc50efb473a9d7ceded9f27b4c41f83a4d949d4382b5ace3" \
