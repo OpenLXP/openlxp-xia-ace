@@ -11,8 +11,8 @@ app_name = 'api'
 
 urlpatterns = [
     path('xia-workflow/', WorkflowView.as_view(), name='xia_workflow'),
-    path('credential-data/', views.CredentialDataView.as_view(),
-         name='credential-data'),
+    path('credit-data/', views.CreditDataView.as_view(),
+         name='credit-data'),
 ]
 
 # urlpatterns = format_suffix_patterns(urlpatterns, allowed=['json', 'html','xml'])

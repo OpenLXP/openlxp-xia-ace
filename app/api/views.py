@@ -53,18 +53,12 @@ def get_status(request, task_id):
     return JsonResponse(result, status=200)
 
 
-class CredentialDataView(APIView):
+class CreditDataView(APIView):
     """Handles HTTP requests for Credential data for XIA"""
 
     parser_classes = [PlainTextParser]
 
     def post(self, request):
-        # context = self.get_context_data()
-        # content_negotiation_class = IgnoreClientContentNegotiation
-
-        # if self.kwargs.has_key('xml'):
-        #     return self.render_to_response(context, content_type="text/xml; charset=utf-8")
-        # return Response(self.render_to_response(context), status=status.HTTP_200_OK)
 
         xsr_root = element_Tree.fromstring(request.data)
 
@@ -113,5 +107,6 @@ class CredentialDataView(APIView):
         get_source_metadata([std_source_df])
         logger.info(std_source_df)
 
-        return Response(request.data,
+        return Response({"message": "Extraction of data successful!"
+                         },
                         status=status.HTTP_200_OK)
