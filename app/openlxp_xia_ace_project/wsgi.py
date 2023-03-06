@@ -1,5 +1,5 @@
 """
-WSGI config for openlxp_xia_jko_project project.
+WSGI config for openlxp_xia_ace_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,6 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'openlxp_xia_jko_project.settings')
+                      'openlxp_xia_ace_project.settings')
 
 application = get_wsgi_application()
